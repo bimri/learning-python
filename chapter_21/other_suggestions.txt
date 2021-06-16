@@ -1,0 +1,11 @@
+module in Python’s standard library, which automates timing of
+timeit code, supports command-line usage modes, and finesses some platform-specific issues
+
+profile standard library module for a complete
+source code profiler tool - profile code to isolate bottlenecks
+before recoding and timing alternatives.
+
+
+the standard library also ships with a module named timeit that can
+be used in similar ways, but offers added flexibility and may better insulate clients from
+some platform differences.
