@@ -1,0 +1,8 @@
+List comprehensions can become even more complex if we need them to—for instance,
+they may contain nested loops, coded as a series of for clauses. In fact, their full syntax
+allows for any number of for clauses, each of which can have an optional associated
+if clause.
+
+For example, the following builds a list of the concatenation of x + y for every x in one
+string and every y in another. It effectively collects all the ordered combinations of the
+characters in two strings:
