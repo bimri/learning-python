@@ -1,0 +1,96 @@
+#!python
+"""
+File: formats.py (2.X and 3.X)
+Various specialized string display formatting utilities.
+Test me with canned self-test or command-line arguments.
+To do: add parens for negative money, add more features.
+"""
+
+def commas(N):
+    """
+    Format positive integer-like N for display with
+    commas between digit groupings: "xxx,yyy,zzz".
+    """
+    digits = str(N)
+    assert(digits.isdigit())
+    result = ''
+    while digits:
+        digits, last3 = digits[:-3], digits[-3:]
+        result = (last3 + ',' + result) if result else last3
+    return result
+
+def money(N, numwidth=0, currency='$'):
+    """
+    Format number N for display with commas, 2 decimal digits,
+    leading $ and sign, and optional padding: "$ -xxx,yyy.zz".
+    numwidth=0 for no space padding, currency='' to omit symbol,
+    and non-ASCII for others (e.g., pound=u'\xA3' or u'\u00A3').
+    """
+    sign = '-' if N < 0 else ''
+    N = abs(N)
+    whole = commas(int(N))
+    fract = ('%.2f' % N)[-2:]
+    number = '%s%s.%s' % (sign, whole, fract)
+    return '%s%*s' % (currency, numwidth, number)
+
+
+if __name__ == '__main__':
+    def selftest():
+        tests = 0, 1        # fails: −1, 1.23
+        tests += 12, 123, 1234, 12345, 123456, 1234567
+        tests += 2 ** 32, 2 ** 100
+        for test in tests:
+            print(commas(test))
+
+        print('')
+        tests = 0, 1, -1, 1.23, 1., 1.2, 3.14159
+        tests += 12.34, 12.344, 12.345, 12.346
+        tests += 2 ** 32, (2 ** 32 + .2345)
+        tests += 1.2345, 1.2, 0.2345
+        tests += -1.2345, -1.2, -0.2345
+        tests += -(2 ** 32), -(2**32 + .2345)
+        tests += (2 ** 100), -(2 ** 100)
+        for test in tests:
+            print('%s [%s]' % (money(test, 17), test))
+    
+    import sys
+    if len(sys.argv) == 1:
+        selftest()
+    else:
+        print(money(float(sys.argv[1]), int(sys.argv[2])))
+
+
+
+'''
+To test specific strings, pass them in on the command line along with a minimum field
+width; the script’s __main__ code passes them on to its money function, which in turn
+runs commas:
+    C:\code> python formats.py 999999999 0
+    $999,999,999.00
+    C:\code> python formats.py −999999999 0
+    $-999,999,999.00
+    
+    C:\code> python formats.py 123456789012345 0
+    $123,456,789,012,345.00
+    C:\code> python formats.py −123456789012345 25
+    $ −123,456,789,012,345.00
+    
+    C:\code> python formats.py 123.456 0
+    $123.46
+    C:\code> python formats.py −123.454 0
+    $-123.45
+'''
+
+"""
+As before, because this code is instrumented for dual-mode usage, we can also import
+its tools normally to reuse them as library components in scripts, modules, and the
+interactive prompt:
+    >>> from formats import money, commas
+    >>> money(123.456)
+    '$123.46'
+    >>> money(-9999999.99, 15)
+    '$ −9,999,999.99'
+    >>> X = 99999999999999999999
+    >>> '%s (%s)' % (commas(X), X)
+    '99,999,999,999,999,999,999 (99999999999999999999)
+"""
