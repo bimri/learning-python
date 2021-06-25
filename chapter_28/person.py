@@ -135,3 +135,24 @@ a Manager, calls its methods, and prints it. When we make a Manager, we pass in 
 and an optional job and pay as before—because Manager had no __init__ constructor,
 it inherits that in Person.
 '''
+
+
+"Polymorphism in Action"
+if __name__ == '__main__':
+    oluchi = Person('Oluchi Ibeneme')
+    nyathi = Person('Pamela Nyathi', job='lab technician', pay=250000)
+    print(oluchi)
+    print(nyathi)
+    print(nyathi.lastName(), oluchi.lastName())             
+    nyathi.giveRaise(.10)                                   
+    print(nyathi)
+    rio = Manager('Rio Je', 'mgr', 500000)                  
+    rio.giveRaise(.10)                                      
+    print(rio.lastName())
+    print(rio)
+    print('--All three--')
+    for obj in (oluchi, nyathi, rio):                                   # Process objects generically
+        obj.giveRaise(.10)                                      # Run this object's giveRaise
+        print(obj)
+    
+    
