@@ -91,3 +91,47 @@ if __name__ == '__main__':
     nyathi.giveRaise(.10)                                   # instead of hardcoding
     print(nyathi)
 
+
+"Augmenting Methods: The Bad Way"
+class Manager(Person):                                      # Define a subclass of Person                                  # Inherit Person attrs
+    def giveRaise(self, percent, bonus=.10):                # Redefine to customize
+        self.pay = int(self.pay * (1 + percent + bonus))    # Bad: cut and paste
+
+
+"Augmenting Methods: The Good Way"
+'''
+This code leverages the fact that a class’s method can always be called either through
+an instance (the usual way, where Python sends the instance to the self argument
+automatically) or through the class (the less common scheme, where you must pass the
+instance manually). In more symbolic terms, recall that a normal method call of this
+form:
+    instance.method(args...)
+
+is automatically translated by Python into this equivalent form:
+    class.method(instance, args...)
+'''
+class Manager(Person):
+    def giveRaise(self, percent, bonus=.10):                # Redefine at this level
+        Person.giveRaise(self, percent + bonus)             # Call Person's version; Good: augment original
+
+
+if __name__ == '__main__':
+    oluchi = Person('Oluchi Ibeneme')
+    nyathi = Person('Pamela Nyathi', job='lab technician', pay=250000)
+    print(oluchi)
+    print(nyathi)
+    print(nyathi.lastName(), oluchi.lastName())             
+    nyathi.giveRaise(.10)                                   
+    print(nyathi)
+    rio = Manager('Rio Je', 'mgr', 500000)                  # Make a Manager:__init__
+    rio.giveRaise(.10)                                      # Runs custom version
+    print(rio.lastName())
+    print(rio)
+
+
+'''
+To test our Manager subclass customization, we’ve also added self-test code that makes
+a Manager, calls its methods, and prints it. When we make a Manager, we pass in a name,
+and an optional job and pay as before—because Manager had no __init__ constructor,
+it inherits that in Person.
+'''
