@@ -20,8 +20,8 @@ self.data assignment in __init__), and in the class from which they inherit name
 x = MixedNames(1)                           # Make two instance objects
 y = MixedNames(2)                           # Each has its own data
 
-print(x.display())                          # self.data differs, MixedNames.data is the same
-print(y.display())
+x.display()                          # self.data differs, MixedNames.data is the same
+y.display()
 
 
 '''
