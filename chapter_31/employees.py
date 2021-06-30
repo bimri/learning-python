@@ -1,5 +1,11 @@
 "OOP and Inheritance: “Is-a” Relationships"
-from __future__ import print_function
+'''
+From a programmer’s point of view, inheritance is kicked off by attribute qualifications, which
+trigger searches for names in instances, their classes, and then any superclasses. From
+a designer’s point of view, inheritance is a way to specify set membership: a class defines
+a set of properties that may be inherited and customized by more specific sets (i.e.,
+subclasses).
+'''
 
 class Employee:
     def __init__(self, name, salary=0):
