@@ -1,7 +1,7 @@
 #!python
 "Listing instance attributes with __dict__"
 
-class ListIntance:
+class ListInstance:
     """
     Mix-in class that provides a formatted print() or str() of instances via
     inheritance of __str__ coded here; displays instance attrs only; self is
@@ -32,7 +32,7 @@ class ListIntance:
 
 
 if __name__ == '__main__':
-    class Spam(ListIntance):
+    class Spam(ListInstance):
         def __init__(self):
             self.data1 = 'food'
         
