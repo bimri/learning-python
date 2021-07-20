@@ -95,3 +95,24 @@ if __name__ == '__main__':
     trace(mapattrs(I), 'ATTRS\n')
     trace(mapattrs(I, bysource=True), 'OBJS\n')
 
+    """
+    __X pseudoprivate
+    names are mapped to their defining classes, and how ListInstance appears in
+    the MRO before object, which has a __str__ that would otherwise be chosen first—as
+    you’ll recall, mixing this method in was the whole point of the lister classes!
+    """
+    from mapattrs import trace, dflr, inheritance, mapattrs
+    from . import Sub
+    I = Sub()                                                   # Sub inherits from Super and ListIntance roots
+    trace(dflr(I.__class__))                                    # 2.X search order: implied object before lister!
+    trace(inheritance(I))                                       # 3.X (+2.X newstlye) search order: lister first
+    trace(mapattrs(I))                                          # Invert dict to list by object
+    trace(mapattrs(I, bysource=True))                           # Invert dict to list by attr
+    trace(mapattrs(I, withobject=True))                         # Remove object built-in class attrs
+
+    '''
+    Here’s the bit you might run if you want to label class objects with names inherited by
+    an instance, though you may want to filter out some built-in double-underscore names
+    for the sake of users’ eyesight!'''
+    amap = mapattrs(I, withobject=True, bysource=True)
+    trace(amap)
