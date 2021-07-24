@@ -55,7 +55,7 @@ Finally, we might instead code a more full-blown class to implement the record a
 processing—something that data-oriented dictionaries do not directly support:
 '''
 class Person:
-    def __init__(self, name, jobs, age=None):                   # class = data = logic
+    def __init__(self, name, jobs, age=None):               # class = data = logic
         self.name = name 
         self.jobs = jobs 
         self.age  = age 
