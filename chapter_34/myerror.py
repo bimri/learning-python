@@ -1,4 +1,4 @@
-"ccc"
+"Example: Coding Termination Actions with try/finally"
 class MyError(Exception):
     pass 
 
