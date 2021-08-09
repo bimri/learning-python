@@ -1,0 +1,22 @@
+ 
+************************************************************
+
+===> OFFICIAL CERTIFICATE <===
+
+Date: Tue Aug 10 00:44:42 2021
+
+This certifies that:
+
+	bimri
+
+has survived the massive tome:
+
+	Learning Python 5th Edition
+
+and is now entitled to all privileges thereof, including
+the right to called a Python Programmer a.k.a. "Pythonista".
+--Mark Lutz, Instructor
+
+
+************************************************************
+
