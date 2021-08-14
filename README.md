@@ -1,4 +1,4 @@
-# learning-python book review
+# Learning Python book review
 
 ‘Part One’ of the book introduces reasons for picking python as part of your programming toolkit. Its most powerful benefits across the scope is: ease of use – high on that list – which in turn increases the productivity of the developer. Still, the first chapter, embarks to show one the lay of the land – with a handful of various implementations of Python out there in the world. ANSI C, is how CPython(the main implementation) of Python is built. There is PyPy, used to speed up Python. Cython, being a way to wrap C libraries and declarations, alongside it being an extension for python into the C API.
 
