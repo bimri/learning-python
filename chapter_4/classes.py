@@ -1,5 +1,7 @@
-'''object-oriented programming in Python—an optional but powerful feature
-of the language that cuts development time by supporting programming by customization'''
+'''
+object-oriented programming in Python— an optional but powerful feature
+of the language that cuts development time by supporting programming by customization
+'''
 
 # classes define new types
 # of objects that extend the core set
@@ -18,13 +20,13 @@ class Worker:
 
 
 bimri  = Worker('Bimri Kintu', 500000)            # Make two instances
-nyathi = Worker('Nyathi Nomuhle', 300000)         # Each has name and pay attrs
+unity = Worker('Unity Techi', 300000)             # Each has name and pay attrs
 
 print(bimri.lastName())                           # call method: bimri is self
-print(nyathi.lastName())
+print(unity.lastName())
 
-nyathi.giveRaise(.10)                             # Updates nyathi's pay
+unity.giveRaise(.10)                              # Updates unity's pay
 bimri.giveRaise(.1)
 
-print(nyathi.pay)
+print(unity.pay)
 print(bimri.pay)
