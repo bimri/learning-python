@@ -18,4 +18,3 @@ if type(L) == list:
 
 if type(L) == type([]):
     print('yes')
-
