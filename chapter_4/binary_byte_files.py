@@ -1,5 +1,7 @@
-'''Python’s struct module can both create and unpack
-            packed binary data'''
+'''
+Python’s struct module can both create and unpack
+packed binary data
+'''
 
 # Binary files are useful for processing media, 
 # accessing data created by C programs, and so on.
