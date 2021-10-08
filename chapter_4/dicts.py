@@ -38,9 +38,11 @@ rec['jobs'].append('janitor')
 print(rec)
 
 
-'''To check for Key is present in a dict collection
-    use "in" membership test - so as not to encounter
-    errors - for missing keys'''
+'''
+To check for Key is present in a dict collection
+use "in" membership test - so as not to encounter
+errors - for missing keys
+'''
 P = {'a': 1, 'b': 2, 'c': 3}
 print(P)
 
