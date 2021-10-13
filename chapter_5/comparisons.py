@@ -1,4 +1,4 @@
-'''Normal and Chained'''
+'Normal and Chained'
 
 print(1 < 2)
 print(2.0 >= 1)
