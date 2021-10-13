@@ -37,7 +37,7 @@ print(B + ' is coding python basics.\n')
 print(B * 8)
 
 
-"""Strings are immutable by nature."""
+"Strings are immutable by nature"
 # To change them in-place: - run an expression to make new objects
 print()
 print(B)
@@ -47,8 +47,10 @@ print(B)
 print()
 
 
-'''Changing Strings in place: by first converting it \
-    a list'''
+'''
+Changing Strings in place: by first converting it into
+a list
+'''
 
 S = 'shrubberry'
 L = list(S)             # Expand to a list: [...]
