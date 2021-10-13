@@ -2,8 +2,10 @@ S = 'hello'
 print(S[::-1])              # Reversing items
 
 
-'''With a negative stride, the meanings 
-of the first two bounds are essentially reversed.'''
+'''
+With a negative stride, the meanings 
+of the first two bounds are essentially reversed.
+'''
 s = 'abcedfg'
 print(s[5:1:-1])                   # Bounds roles differ
 
