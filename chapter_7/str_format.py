@@ -1,8 +1,8 @@
 reply = """
-Greetings...
-Hello %(name)s!
-Your age is %(age)s
-"""
+        Greetings...
+        Hello %(name)s!
+        Your age is %(age)s
+        """
 
 values = {'name': 'Bob', 'age': 40}
 print(reply % values)
@@ -15,7 +15,7 @@ print('%(qty)d more %(food)s' % vars())
 
 
 
-'''Formatting Method Basics'''
+'Formatting Method Basics'
 template = '{0}, {1} and {2}'                                               # By position
 print(template.format('spam', 'ham', 'eggs'))
 
