@@ -1,5 +1,7 @@
-'''File objects are Python code’s main interface 
-   to external files on your computer'''
+'''
+File objects are Python code’s main interface 
+to external files on your computer
+'''
 
 # Opening & Writing to a file store to your CWD
 f = open('data.txt', 'w')                               # Make a new file in output mode('w' is write)
@@ -20,4 +22,3 @@ print(text.split())
 # Files provide an iterator that automatically reads
 # line by line in for loops and other contexts.
 for line in open('data.txt'): print(line)
-
