@@ -1,4 +1,4 @@
-'''Classic, Floor, and True'''
+"Classic, Floor, and True"
 
 # X / Y  --> Classic and True division
 # Always keeping remainders in floating-point results, regardless of types.
