@@ -1,34 +1,34 @@
 S = 'Spam'
 
-#Find method
+# `Find` method
 print(S.find('pa'))     # find the offset of a string in S
 
 print(S)
 
-# Replace method
+# `Replace` method
 print(S.replace('pa', 'XYZ'))       # Replace occurences of a string in S with another
 print(S)                            # Remains undefiled - immutable!
 
 
-# Splitting method
+# 'Splitting' method
 line = 'aaa,bbb,ccccc,dd'
 print(line.split(','))          # split on delimiter into a list of substrings
 
 
-# Upper/Lowercase conversions
+# 'Upper/Lowercase' conversions
 S = 'Spam'
 print(S.upper())            # upper-and lowercase conversion
 print(S.isalpha())          # Content tests: isaplpha, isdigit 
 
 
-# Whitespace
+# 'Whitespace'
 line1 = 'aaa,bbb,ccccc,dd\n'
 print(line1)
 print(line1.rstrip())               # Remove whitespace chars on the right side
 print(line1.rstrip().split(','))     # Combine two operations
 
 
-# Formatting
+# 'Formatting'
 print('%s, eggs, %s' % ('spam', 'SPAM!'))                   # Formatting expression(all)
 print('{0}, eggs, and {1}'.format('spam', 'SPAM!'))         # Formatting METHOD
 print('{}, eggs and {}'.format('spam', 'SPAM!'))            # Numbers are optional
