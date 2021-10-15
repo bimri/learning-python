@@ -1,5 +1,7 @@
-'''When you use lists, it is illegal to assign to an 
-    offset that is off the end of the list'''
+'''
+When you use lists, it is illegal to assign to an 
+offset that is off the end of the list
+'''
 
 # L = []
 # print(L[99] = 'spam')                 # generates IndexError: list assignment index out of range
