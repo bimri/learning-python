@@ -7,7 +7,7 @@ print('ham' in D)                                          # Key membership test
 print(list(D.keys()))                                      # Create a new list of D's keys
 
 
-'''Changing Dictionaries in Place'''
+'Changing Dictionaries in Place'
 print(D)
 D['ham'] = ['grill', 'bake', 'fry']                        # Change entry (value=list)
 print(D)
