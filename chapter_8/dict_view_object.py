@@ -31,7 +31,7 @@ for key in D:
     print(key)
 
 
-'''dynamically reflect future changes'''
+'dynamically reflect future changes'
 D = {'a': 1, 'b': 2, 'c': 3}
 print(D)
 
@@ -71,5 +71,3 @@ print(D.items() | D.keys())                         # Union view and view
 print(D.items() | D)                                # dict treated same as its keys
 print(D.items() | {('c', 3), ('d', 4)})             # Set of key/value pairs
 print(dict(D.items() | {('c', 3), ('d', 4)}))       # dict accepts iterable sets too
-
-
