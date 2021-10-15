@@ -1,11 +1,10 @@
 '''
 Errors for nonexistent key fetches are common in sparse matrixes:
-
     1. Test for key ahead of time in if statements
     2. Use try statement to catch & recover from the exception explicity
     3. Use the dictionary get method.
-
 '''
+
 Matrix = {}
 Matrix[(2, 3, 4)] = 88
 Matrix[(7, 8, 9)] = 99
