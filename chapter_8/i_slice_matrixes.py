@@ -1,6 +1,8 @@
-'''Because lists are sequences, indexing and slicing work the same way for lists as they do
-for strings'''
-L = ['nyathi', 'oluchi', 'BIMRI!']
+'''
+Because lists are sequences, indexing and slicing work the 
+same way for lists as they do for strings
+'''
+L = ['AMD', 'office', 'BIMRI!']
 print(L[2])
 print(L[-2])
 print(L[1:])
