@@ -1,15 +1,17 @@
-'''Because lists are mutable, they support operations 
-that change a list object in place'''
+'''
+Because lists are mutable, they support operations 
+that change a list object in place
+'''
 
 # You can change a list's contents by assigning to either
 # a particular item(offset) or an entire section(slice)
-L = ['nyathi', 'Oluchi', 'BIMRI']
+L = ['AMD', 'OFFICE', 'BIMRI']
 print(L)
 
-L[1] = 'Koi'                                                # Index assignment
+L[1] = 'Soy'                                                # Index assignment
 print(L)
 
-L[0:2] = ['nekesa', 'mukanzi']                              # Slice assignment: delete+insert
+L[0:2] = ['oxridge', 'adapter']                             # Slice assignment: delete+insert
 print(L)
 
 
