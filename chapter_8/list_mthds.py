@@ -1,5 +1,5 @@
 L = ['loyal', '6lack', 'SONG!']
-L.append('lying')                                   # Append method call: add item at end
+L.append('fying')                                   # Append method call: add item at end
 print(L)
 
 L.sort()
